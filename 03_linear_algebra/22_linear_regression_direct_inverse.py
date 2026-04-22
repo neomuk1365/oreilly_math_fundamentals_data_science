@@ -26,10 +26,11 @@ y_predict = X_1.dot(b)
 # plot
 import matplotlib.pyplot as plt
 import numpy as np
+
 # show in chart
 X = np.array([p.x for p in df.itertuples()])
 Y = np.array([p.y for p in df.itertuples()])
 
 plt.plot(X, Y, 'o') # scatterplot
-plt.plot(X, m*X+b) # line
+plt.plot(X, b[0]*X + b[1]) # line
 plt.show()
